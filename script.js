@@ -90,7 +90,36 @@ function createEvaChart(elementId, cpiData, spiData) {
         } 
     }); 
 } 
- 
+
+function renderProjectCards() {
+  const container = document.getElementById("summaries-container");
+  projects.forEach((p, index) => {
+    const card = document.createElement("div");
+    card.className = "summary-card";
+    card.innerHTML = `
+      <h3>${p.name}</h3>
+      <p>Status: ${p.status}<br>
+      PV: $${p.pv}M<br>
+      EV: $${p.ev}M<br>
+      AC: $${p.ac}M<br>
+      CV: $${p.cv}M<br>
+      SV: $${p.sv}M<br>
+      CPI: ${p.cpi}<br>
+      SPI: ${p.spi}<br>
+      EAC: $${p.eac}M</p>
+      <canvas class="eva-chart" id="eva-${index}"></canvas>
+      <button onclick="viewSummary('${p.name}')">View Details</button>
+    `;
+    container.appendChild(card);
+
+    // Draw chart
+    createEvaChart(`eva-${index}`, p.cpiData, p.spiData);
+  });
+}
+
+// Call after DOM loads
+document.addEventListener("DOMContentLoaded", renderProjectCards);
+
 // Initialize EVA Trend Charts 
 createEvaChart('eva-urban', [0.98, 0.97, 0.96, 0.95], [1.00, 0.99, 0.98, 0.98]); 
 createEvaChart('eva-highway', [0.95, 0.94, 0.93, 0.93], [0.90, 0.87, 0.85, 0.83]); 
