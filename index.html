@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Construction Project Summaries with EVA</title> 
+    <link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> 
+    <!-- Header --> 
+    <header> 
+        <nav> 
+            <div class="logo">BuildSummit</div> 
+            <ul class="nav-links"> 
+                <li><a href="#home">Home</a></li> 
+                <li><a href="#features">Features</a></li> 
+                <li><a href="#summaries">Summaries</a></li> 
+                <li><a href="#contact">Contact</a></li> 
+            </ul> 
+            <div class="burger"> 
+                <div class="line1"></div> 
+                <div class="line2"></div> 
+                <div class="line3"></div> 
+            </div> 
+        </nav> 
+    </header> 
+ 
+    <!-- Hero Section --> 
+    <section id="home" class="hero"> 
+        <div class="hero-content"> 
+            <h1>Construction Project Summaries with EVA</h1> 
+            <p>Analyze project performance with real-time Earned Value Analysis, forecasting, and trend insights.</p> 
+            <a href="#contact" class="cta-button">Request an EVA Demo</a> 
+        </div> 
+    </section> 
+ 
+    <!-- Features Section --> 
+    <section id="features" class="features"> 
+        <h2>Why Choose BuildSummit?</h2> 
+        <div class="features-grid"> 
+            <div class="feature-card"> 
+                <h3>EVA Dashboards</h3> 
+                <p>Track PV, EV, AC, CPI, SPI, and EAC, inspired by Primavera P6 and Procore.</p> 
+            </div> 
+            <div class="feature-card"> 
+                <h3>Trend Analysis</h3> 
+                <p>Visualize CPI/SPI trends over time, similar to Planisware’s predictive analytics.</p> 
+            </div> 
+            <div class="feature-card"> 
+                <h3>Seamless Integrations</h3> 
+                <p>Connect with Microsoft Project, QuickBooks, and more for streamlined EVA workflows.</p> 
+            </div> 
+        </div> 
+    </section> 
+ 
+    <!-- Project Summaries Section --> 
+    <section id="summaries" class="summaries"> 
+        <h2>Project Summaries</h2> 
+        <div class="summaries-grid"> 
+            <div class="summary-card"> 
+                <h3>Urban Tower Project</h3> 
+                <p>Status: In Progress<br>PV: $8M<br>EV: $7.8M<br>AC: $8.2M<br>CV: -$0.4M<br>SV: -$0.2M<br>CPI: 0.95<br>SPI: 0.98<br>EAC: $12.63M</p> 
+                <canvas class="eva-chart" id="eva-urban"></canvas> 
+                <button onclick="viewSummary('Urban Tower')">View Details</button> 
+            </div> 
+            <div class="summary-card"> 
+                <h3>Highway Expansion</h3> 
+                <p>Status: Planning<br>PV: $3M<br>EV: $2.5M<br>AC: $2.7M<br>CV: -$0.2M<br>SV: -$0.5M<br>CPI: 0.93<br>SPI: 0.83<br>EAC: $26.88M</p> 
+                <canvas class="eva-chart" id="eva-highway"></canvas> 
+                <button onclick="viewSummary('Highway Expansion')">View Details</button> 
+            </div> 
+            <div class="summary-card"> 
+                <h3>Residential Complex</h3> 
+                <p>Status: Completed<br>PV: $8M<br>EV: $8M<br>AC: $7.9M<br>CV: $0.1M<br>SV: $0M<br>CPI: 1.01<br>SPI: 1.00<br>EAC: $7.92M</p> 
+                <canvas class="eva-chart" id="eva-residential"></canvas> 
+                <button onclick="viewSummary('Residential Complex')">View Details</button> 
+            </div> 
+        </div> 
+    </section> 
+ 
+    <!-- Contact Section --> 
+    <section id="contact" class="contact"> 
+        <h2>Contact Us</h2> 
+        <form id="contact-form"> 
+            <input type="text" placeholder="Name" required> 
+            <input type="email" placeholder="Email" required> 
+            <textarea placeholder="Your Message" required></textarea> 
+            <button type="submit">Send Message</button> 
+        </form> 
+    </section> 
+ 
+    <!-- Footer --> 
+    <footer> 
+        <p>&copy; 2025 BuildSummit. All rights reserved.</p> 
+    </footer> 
+ 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+    <script src="script.js"></script> 
+</body> 
+</html>
