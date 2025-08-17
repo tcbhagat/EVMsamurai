@@ -1,3 +1,36 @@
+const projects = [
+  {
+    name: "Urban Tower Project",
+    status: "In Progress",
+    pv: 8, ev: 7.8, ac: 8.2,
+    cv: -0.4, sv: -0.2,
+    cpi: 0.95, spi: 0.98,
+    eac: 12.63,
+    cpiData: [0.98, 0.97, 0.96, 0.95],
+    spiData: [1.00, 0.99, 0.98, 0.98]
+  },
+  {
+    name: "Highway Expansion",
+    status: "Planning",
+    pv: 3, ev: 2.5, ac: 2.7,
+    cv: -0.2, sv: -0.5,
+    cpi: 0.93, spi: 0.83,
+    eac: 26.88,
+    cpiData: [0.95, 0.94, 0.93, 0.93],
+    spiData: [0.90, 0.87, 0.85, 0.83]
+  },
+  {
+    name: "Residential Complex",
+    status: "Completed",
+    pv: 8, ev: 8, ac: 7.9,
+    cv: 0.1, sv: 0,
+    cpi: 1.01, spi: 1.0,
+    eac: 7.92,
+    cpiData: [1.00, 1.01, 1.01, 1.01],
+    spiData: [1.00, 1.00, 1.00, 1.00]
+  }
+];
+
 // Mobile Menu Toggle 
 const burger = document.querySelector('.burger'); 
 const navLinks = document.querySelector('.nav-links'); 
