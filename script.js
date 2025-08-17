@@ -91,9 +91,9 @@ function createEvaChart(elementId, cpiData, spiData) {
     }); 
 } 
 
-function renderProjectCards() {
+function renderProjectCardsFromCSV(data) {
   const container = document.getElementById("summaries-container");
-  projects.forEach((p, index) => {
+  data.forEach((p, index) => {
     const card = document.createElement("div");
     card.className = "summary-card";
     card.innerHTML = `
@@ -112,10 +112,23 @@ function renderProjectCards() {
     `;
     container.appendChild(card);
 
-    // Draw chart
-    createEvaChart(`eva-${index}`, p.cpiData, p.spiData);
+    // Parse arrays from CSV strings
+    const cpiData = p.cpiData.split(",").map(Number);
+    const spiData = p.spiData.split(",").map(Number);
+    createEvaChart(`eva-${index}`, cpiData, spiData);
   });
 }
+
+// Load CSV with PapaParse
+Papa.parse("projects.csv", {
+  download: true,
+  header: true,
+  complete: function(results) {
+    renderProjectCardsFromCSV(results.data);
+    addForecastingIndicator();
+  }
+});
+
 
 // Call after DOM loads
 document.addEventListener("DOMContentLoaded", renderProjectCards);
