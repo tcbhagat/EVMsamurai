@@ -53,30 +53,14 @@
         </div> 
     </section> 
  
-    <!-- Project Summaries Section --> 
-    <section id="summaries" class="summaries"> 
-        <h2>Project Summaries</h2> 
-        <div class="summaries-grid"> 
-            <div class="summary-card"> 
-                <h3>Urban Tower Project</h3> 
-                <p>Status: In Progress<br>PV: $8M<br>EV: $7.8M<br>AC: $8.2M<br>CV: -$0.4M<br>SV: -$0.2M<br>CPI: 0.95<br>SPI: 0.98<br>EAC: $12.63M</p> 
-                <canvas class="eva-chart" id="eva-urban"></canvas> 
-                <button onclick="viewSummary('Urban Tower')">View Details</button> 
-            </div> 
-            <div class="summary-card"> 
-                <h3>Highway Expansion</h3> 
-                <p>Status: Planning<br>PV: $3M<br>EV: $2.5M<br>AC: $2.7M<br>CV: -$0.2M<br>SV: -$0.5M<br>CPI: 0.93<br>SPI: 0.83<br>EAC: $26.88M</p> 
-                <canvas class="eva-chart" id="eva-highway"></canvas> 
-                <button onclick="viewSummary('Highway Expansion')">View Details</button> 
-            </div> 
-            <div class="summary-card"> 
-                <h3>Residential Complex</h3> 
-                <p>Status: Completed<br>PV: $8M<br>EV: $8M<br>AC: $7.9M<br>CV: $0.1M<br>SV: $0M<br>CPI: 1.01<br>SPI: 1.00<br>EAC: $7.92M</p> 
-                <canvas class="eva-chart" id="eva-residential"></canvas> 
-                <button onclick="viewSummary('Residential Complex')">View Details</button> 
-            </div> 
-        </div> 
-    </section> 
+  <!-- Project Summaries Section --> 
+<section id="summaries" class="summaries"> 
+  <h2>Project Summaries</h2> 
+  <div class="summaries-grid" id="summaries-container">
+    <!-- Cards will be generated here by JS -->
+  </div> 
+</section>
+
  
     <!-- Contact Section --> 
     <section id="contact" class="contact"> 
